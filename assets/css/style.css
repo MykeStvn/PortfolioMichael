@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#inicio {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-image: url(../img/fondo_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+}
+
+#inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12%; /* Altura del difuminado */
+    background: linear-gradient(to bottom, transparent, #0057CA);
+    z-index: 1;
+}
+
+.texto_inicio{
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container-fluid.d-flex {
+    flex-wrap: wrap;
+}
+
+.btn:hover {
+    background-color: #0676ff !important;
+}
+
+.btn:hover i {
+    color: #FFFFFF !important;
+}
+
+#sobre-mi{
+    padding-top: 1%;
+    padding-bottom: 5%;
+    background-color: #0057CA;
+    color: #ffffff;
+}
+
+#contenido-sobre-mi{
+    font-size: 1.2rem;    
+    
+}
+
+.typed-cursor {
+    color: white; /* Color del cursor */
+    font-size: 1.5rem; /* Tamaño del cursor */
+}
+
+#mis-habilidades{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #ffffff;
+}
+
+
+
+/* Diseño de la galería de habilidades */
+.grid-habilidades {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Tarjeta de habilidad */
+.habilidad {
+    background-color: #0139C2; /* Color de fondo oscuro */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.habilidad:hover {
+    transform: scale(1.1);
+}
+
+/* Imágenes */
+.habilidad img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Texto de la habilidad */
+.habilidad p {
+    margin-top: 2%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#habilidades{
+    padding-top: 5%;
+    padding-bottom: 5%;    
+    color: #ffffff;
+}
+
+#contenido-habilidades {
+    background-color: #001a5c;    
+    border-radius: 12px;
+    margin-top: 4%;    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 60%; /* Ajusta este valor según el tamaño deseado */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Para dar espacio interno */
+}
+
+#proyectos {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url(../img/fondo_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+    color: #ffffff;
+}
+
+.proyecto-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Contenedor de la información oculta */
+.proyecto-card .info-hover {
+    position: absolute;
+    bottom: -100%; /* Inicialmente oculto fuera de la tarjeta */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    transition: bottom 0.3s ease-in-out;
+}
+
+/* Mostrar la información al hacer hover */
+.proyecto-card:hover .info-hover {
+    bottom: 0; /* Se desliza hacia arriba */
+}
+
+/* Estilos para los botones */
+.info-hover .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.info-hover .btn-primary {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.info-hover .btn-primary:hover {
+    background: #0056b3;
+}
+
+.info-hover .btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: none;
+}
+
+.info-hover .btn-secondary:hover {
+    background: #545b62;
+}
+
+
