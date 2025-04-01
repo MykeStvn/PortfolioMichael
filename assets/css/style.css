@@ -147,6 +147,8 @@ a{
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .proyecto-card img {
@@ -156,53 +158,63 @@ a{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
+#navbar .nav-link {
+    color: white !important;
+    
+}
+.navbar-toggler-icon {
+    filter: invert(1); /* Convierte el ícono a blanco */
+}
 
-/* Contenedor de la información oculta */
-.proyecto-card .info-hover {
+#footer{
+    background-color: #001a5c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ffffff ;
+}
+
+/* FADE IMAGEN */
+
+.img-fade {
+    position: relative;
+    display: inline-block;
+}
+
+.img-fade::after {
+    content: '';
     position: absolute;
-    bottom: -100%; /* Inicialmente oculto fuera de la tarjeta */
+    bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    transition: bottom 0.3s ease-in-out;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent 0%, #014A9E 100%);
+    pointer-events: none;
 }
 
-/* Mostrar la información al hacer hover */
-.proyecto-card:hover .info-hover {
-    bottom: 0; /* Se desliza hacia arriba */
-}
+/* Efecto de desplazamiento y boton*/
 
-/* Estilos para los botones */
-.info-hover .btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.info-hover .btn-primary {
-    background: #007bff;
-    color: white;
+.btn-flotante {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #014A9E; /* Color de fondo (ajusta al tuyo) */
+    color: white; /* Color del texto/icono */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Forma circular */
     border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000; /* Para que esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Efecto de transición al pasar el mouse */
 }
 
-.info-hover .btn-primary:hover {
-    background: #0056b3;
+.btn-flotante:hover {
+    background-color: #013a7d; /* Color al pasar el mouse */
+    transform: scale(1.1); /* Efecto de escala */
 }
-
-.info-hover .btn-secondary {
-    background: #6c757d;
-    color: white;
-    border: none;
-}
-
-.info-hover .btn-secondary:hover {
-    background: #545b62;
-}
-
 
